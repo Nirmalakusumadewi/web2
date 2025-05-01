@@ -3,7 +3,6 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-
     return view('welcome');
 });
 
@@ -46,5 +45,3 @@ Route::get('/user/{id}', function ($id) {
 Route::get('/user/{id}', function ($id) {
     return "Tampilkan user dengan id = $id";
 })->where('id', '^[A-Za-z]{2}[0-9]+$');
-
-
