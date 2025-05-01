@@ -34,15 +34,7 @@ Route::get('/stok_barang/{jenis?}/{merek?}', function ($jenis = 'smartphone', $m
     return "Cek sisa stok untuk $jenis $merek";
 });
 
-
-Route::get('/user/{id}', function ($id) {
-    // Filter: pastikan hanya angka yang diizinkan
-    if (!is_numeric($id)) {
-        abort(404, "ID tidak valid");
-    }
-    return "Tampilkan user dengan id = $id";
-});
-
 Route::get('/user/{id}', function ($id) {
     return "Tampilkan user dengan id = $id";
-})->where('id', '^[A-Za-z]{2}[0-9]+$');
+})->where('id', '[0-9]+');
+
