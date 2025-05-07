@@ -1,4 +1,7 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 require_once __DIR__ . '/../models/ProductModel.php';
 require_once __DIR__ . '/../config/database.php'; // pastikan koneksi database di-load
 
@@ -9,9 +12,7 @@ class ProductController
     public function __construct()
     {
         // Ambil koneksi PDO dari Database
-        $pdo = Database::getInstance()->getConnection();
         // Kirim koneksi PDO ke konstruktor ProductModel
-        $this->model = new ProductModel($pdo);
     }
 
     public function index()

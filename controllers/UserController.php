@@ -9,8 +9,6 @@ class UserController
     public function __construct()
     {
         $this->startSession(); // Mulai session
-        $pdo = Database::getInstance()->getConnection();
-        $this->model = new UserModel($pdo);
     }
 
     private function startSession()
