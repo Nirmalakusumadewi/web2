@@ -13,6 +13,9 @@
         <div class="info-item">
             <strong>Nama:</strong> {{ $user['nama'] }}
         </div>
+                <div class="info-item">
+            <strong>NIM:</strong> {{ $user['nim'] }}
+                </div>
         <div class="info-item">
             <strong>Email:</strong> {{ $user['email'] }}
         </div>

@@ -44,3 +44,16 @@
 
 </body>
 </html>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aplikasi</title>
+</head>
+<body>
+    @yield('content')
+
+    @include('partials.footer')
+</body>
+</html>
+
